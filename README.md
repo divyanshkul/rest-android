@@ -1,75 +1,108 @@
-# rest-android
+# Rest-Android
 
 ![Travis](https://api.travis-ci.org/jboss-outreach/rest-android.svg)
+[![Gitter chat](https://badges.gitter.im/gitterHQ/services.png)](https://gitter.im/jboss-outreach)
 
 This is a Android Client for testing Rest HTTP calls.
 
-### Setup for Developers
+## Contents
+* [Setting up the project](#setup)
+* [Working on the App](#work)
+* [Contributing](#contributing)
+* [Additional Learning](#additional)
 
-1. Make sure you have downloaded the latest version of Android Studio. It works on Linux, Windows and Mac. Download the correct version for your OS.
 
-2. Go to the project repository and fork it by clicking "Fork" on the top right of the page.
+## <a id = "setup"></a> Setting Up the project
 
-3. If you are working on Windows, download Git Bash for Windows to get a full Unix bash with Git functionality.
+1. Download [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html) for your Operating System!
+2. Make sure you have declared the `JAVA_HOME` environment variable to the directory where JDK was installed. 
+3. Download and install [Android Studio](https://developer.android.com/studio/index.html), an IDE for android application development.
+4. You will also need to download the Android SDK from the IDE itself.
+5. Fork the repository by clicking on the *Fork* icon at the top right corner of this page.
 
-4. Clone the forked project.
+![](https://steemit-production-imageproxy-upload.s3.amazonaws.com/DQmZHFQ5NvaKXG7rrLoYzCwbHyEyCjhbZjY3uP5tMvy2H84)
 
-5. Open the project with Android Studio.
+6. Clone the repository to your local machine by running the following commands on git:
 
+            `git clone https://github.com/[YOUR-USERNAME]/rest-android.git`
+
+ If you need help, refer [Forking and Cloning in git](https://help.github.com/articles/fork-a-repo/)
+ 
 ### Configure remotes
 
 Note: When a repository is cloned, it has a default remote called origin that points to your fork on GitHub, not the original repository it was forked from. To keep track of the original repository, you should add another remote named upstream:
 
-1. Open terminal or git bash in your local repository and clone the repository:
-
-`$ git clone https://github.com/YOUR_USERNAME/rest-android.git`
-
-2. Set the upstream:
+1. Set the upstream:
 
 `$ git remote add upstream https://github.com/jboss-outreach/rest-android.git`
 
-3. Run `$ git remote -v` to check the status, you should see something like the following:
+2. Run `$ git remote -v` to check the status, you should see something like the following:
 
 ``` 
-origin https://github.com/YOUR_USERNAME/powerup-android.git (fetch)
+origin https://github.com/YOUR_USERNAME/rest-android.git (fetch)
 
-origin https://github.com/YOUR_USERNAME/powerup-android.git (push)
+origin https://github.com/YOUR_USERNAME/rest-android.git (push)
 
-upstream https://github.com/systers/powerup-android.git (fetch)
+upstream https://github.com/jboss-outreach/rest-android.git (fetch)
 
-upstream https://github.com/systers/powerup-android.git (push) 
+upstream https://github.com/jboss-outreach/rest-android.git (push) 
 ```
 
-4. To update your local copy with remote changes, run the following:
+3. To update your local copy with remote changes, run the following:
 
 `$ git fetch upstream`
 
 `$ git merge upstream/master`
 
-5. This will give you an exact copy of the current remote. Make sure you don't have any local changes.
+4. This will give you an exact copy of the current remote. Make sure you don't have any local changes. 
 
-### Contributing and developing a feature
+## <a id="work"></a>Working on the app:
+* Open android studio.
+* Import your recently cloned IDE into android studio.
 
-1. Make sure you are in the master branch `$ git checkout master`
+### Running the Application
+***Via your own android smartphone.***
 
-2. Sync your copy with `$ git pull`
+   - Enable [USB Debugging](https://www.howtogeek.com/129728/how-to-access-the-developer-options-menu-and-enable-usb-debugging-on-android-4.2/) on your phone.    
+   - Click **Run** on the Android Studio tool bar, or **Shift + F10** to [run the app](https://developer.android.com/studio/run/device.html).
 
-3. Create a new branch with a meaningful name `$ git checkout -b branch_name`
+***By running a virtual device.***
+   - Setup a [Android Virtual Device](https://developer.android.com/studio/run/managing-avds.html) in the IDE. 
+   - Then running the application by clicking on **Run** on the Android Studio tool bar, or **Shift + F10** and then choose the newly created virtual device to run the app.
+	 
+	 
+## <a id = "contributing"> </a>Contributing to the project and developing a feature
 
-4. Develop your feature on Android Studio and run it using the emulator or connecting your own Android device.
+* Make your intended changes to the working directory.
+* Make sure you are in the master branch `$ git checkout master`
+* Sync your copy with `$ git pull`
+* Create a new branch with a meaningful name `$ git checkout -b branch_name
+* Develop your feature on Android Studio and run it using the emulator or connecting your own Android device.
+* Clean your project from Android Studio > Build/Clean project.
+* Finalize your changes made and then you need to make a [**pull request**](#pull) the changes to working directory.
 
-5. Clean your project from Android Studio > Build/Clean project.
+#### <a id = "push"></a> Pushing your changes 
 
-6. Add the files you changed `$ git add file_name` (avoid using git add .)
+1. Add the files you changed `$ git add file_name` (avoid using git add .)
 
-7. Commit your changes `$ git commit -m "Message briefly explaining the feature"`
+2. Commit your changes `$ git commit -m "Message briefly explaining the feature"`
 
-8. Keep one commit per feature. If you forgot to add changes, you can edit the previous commit `$ git commit --amend`
+3. Keep one commit per feature. If you forgot to add changes, you can edit the previous commit `$ git commit --amend`
 
-9. Push to your forked repository `$ git push origin branch-name`
+4. Push to your forked repository `$ git push origin branch-name`
 
-10. Go into the Github repo and create a pull request explaining your changes.
+#### <a id = "pull"> </a> Making a Pull Request
 
-11. If you are requested to make changes, update your commit using `$ git commit --amend`, push again and the pull request will edit automatically.
+1. Go into the Github repository and create a pull request by clicking on **"New Pull Request"** Do explain your changes, write a very conscise but informative pull request message. Remember to use your words wisely!
 
-12. You need to add a [commit message](https://github.com/jboss-outreach/gci/wiki/Commit-style-guidelines.) to your commit for letting the reviewer know that changes are made.
+2. If you are requested to make changes, update your commit using `$ git commit --amend`, push again and the pull request will edit automatically.
+
+
+## <a id = "additional"> </a> Additional Learning
+
+* [Understanding the Github Flow](https://guides.github.com/introduction/flow)
+* [Getting started with Git](https://git-scm.com/book/en/v1/Getting-Started)
+* [Practice git and have fun!](https://try.github.io)
+* [Getting Started with Android Studio](https://developer.android.com/training/index.html)
+* [Android Studio Documentation](https://developer.android.com/guide/index.html)
+* [Need further help? Chat with us!](https://gitter.im/jboss-outreach/gci)
