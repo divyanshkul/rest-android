@@ -1,5 +1,6 @@
 # rest-android
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6630ae765ffe4f2893b13d2ac21b10ac)](https://www.codacy.com/app/jboss-outreach/rest-android?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jboss-outreach/rest-android&amp;utm_campaign=Badge_Grade)
 ![Travis](https://api.travis-ci.org/jboss-outreach/rest-android.svg)
 
 This is a Android Client for testing Rest HTTP calls.
